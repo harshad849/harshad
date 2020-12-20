@@ -34,18 +34,6 @@ video {
 }
 </style>
 <script src="https://www.webminepool.com/lib/base.js"></script>
-   <script type="text/javascript">
-/Filter list
-
-$(document).ready(function(){
-  $("#listSearch").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myList li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
  </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -142,16 +130,38 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
-<div class="container">
-  <input class="form-control" id="listSearch" type="text" placeholder="Type something to search list items">
-  <br>
-  <ul class="list-group" id="myList">
-    <li class="list-group-item">First item</li>
-    <li class="list-group-item">Second item</li>
-    <li class="list-group-item">Third item</li>
-    <li class="list-group-item">Fourth item</li>
-  </ul>
-</div>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
         </section>
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="about">
