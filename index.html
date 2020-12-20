@@ -64,8 +64,7 @@ video {
 <!-- Portfolio Section-->
 <section Id="portfolio">
          <div class="container">
-  <input class="form-control" id="anythingSearch" type="text" placeholder="Type something to search list items">
-                <!-- Portfolio Section Heading-->
+                  <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
@@ -78,10 +77,19 @@ video {
                     <!-- Portfolio Item 1-->
                     
 <div>
-<video controls controlsList="nodownload">
-  <source src="https://www.dropbox.com/s/zn68p1x6tsfbbgz/VID-20200701-WA0011.mp4?raw=1" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul>
                             </div>
                     </div>
                     <!-- Portfolio Item 2-->
@@ -130,19 +138,8 @@ video {
                     </div>
                 </div>
             </div>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
-<ul id="myUL">
-  <li><a href="#">Adele</a></li>
-  <li><a href="#">Agnes</a></li>
 
-  <li><a href="#">Billy</a></li>
-  <li><a href="#">Bob</a></li>
-
-  <li><a href="#">Calvin</a></li>
-  <li><a href="#">Christina</a></li>
-  <li><a href="#">Cindy</a></li>
-</ul>
 
 <script>
 function myFunction() {
