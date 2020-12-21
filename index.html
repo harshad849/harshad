@@ -160,9 +160,18 @@ function myFunction() {
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Contact Section Form-->
+                                <div class="row">
+                    <div class="col-lg-8 mx-auto">
 <form action="https://send.pageclip.co/b64BuoGJlRM8m3VZyS745I9LDyG0O133/Test" class="pageclip-form" method="post">
   <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-    <input type="text" name="name" value="Your Name" /></br>
+   <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label> <input type="text" name="name" value="Your Name" /></label>
+                                    <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
   <input type="email" name="email" value="Your E-mail" /></br>
 <textarea name="body">Requast a Movie or your quation.</textarea></br>
   <!-- This button will have a loading spinner. Keep the inner span for best results. -->
