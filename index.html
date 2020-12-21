@@ -171,14 +171,26 @@ function myFunction() {
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-
-  <input type="email" name="email" value="Your E-mail" /></br>
-<textarea name="body">Requast a Movie or your quation.</textarea></br>
+  <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label> <input type="email" name="email"  /></label>
+                                    <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+       <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label><textarea name="body">Requast a Movie or your quation.</textarea></label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+   <br />
+                            <div id="success"></div>
+                            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
+                        </form>
   <!-- This button will have a loading spinner. Keep the inner span for best results. -->
-  <button type="submit" class="pageclip-form__submit">
-    <span>Send</span>
-  </button>
-</form>
+
                     </div>
                 </div>
             </div>
