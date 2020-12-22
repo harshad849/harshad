@@ -166,16 +166,30 @@ function myFunction() {
   <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
    <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label> <input type="text" name="name"  /></label>
-                                    <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
-                                    <p class="help-block text-danger"></p>
-                                </div>
+                                    <label>Your Email</label>
+          <input
+            required
+            class="form-control"
+            type="email"
+            name="email"
+            pattern="[ab]+@.+"
+            data-valueMissing="Need an email!"
+            data-patternMismatch="Only a and b characters allowed!"
+            placeholder="a@b.com" />
+</div>
                             </div>
   <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label> <input type="email" name="email"  /></label>
-                                    <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
-                                    <p class="help-block text-danger"></p>
+                                    <label>Your Email</label>
+          <input
+            required
+            class="form-control"
+            type="name"
+            name="name"
+            pattern="[ab ]+"
+            data-valueMissing="Need an name!"
+            data-patternMismatch="Only a and b characters allowed!"
+            placeholder="Your Name" />
                                 </div>
                             </div>
        <div class="control-group">
