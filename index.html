@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+<script>
+import io.ipinfo.api.IPInfo;
+import io.ipinfo.api.errors.RateLimitedException;
+import io.ipinfo.api.model.IPResponse;
+
+public class Main {
+
+    public static void main(String... args) {
+        IPInfo ipInfo = IPInfo.builder().setToken("8ade16932973c7").build();
+
+        try {
+            IPResponse response = ipInfo.lookupIP("8.8.8.8");
+
+            // Print out the hostname
+            System.out.println(response.getHostname());
+        } catch (RateLimitedException ex) {
+            // Handle rate limits here.
+        }
+    }
+}
+</script>
 <script data-ad-client="ca-pub-7277637026734757" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK81PFT96J"></script>
